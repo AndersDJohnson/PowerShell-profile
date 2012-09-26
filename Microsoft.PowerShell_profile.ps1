@@ -15,4 +15,4 @@
 
 
 # Set path for Node.js npm modules.
-$env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
+# $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
