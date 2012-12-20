@@ -16,3 +16,8 @@
 
 # Set path for Node.js npm modules.
 # $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
+
+# Mocha testing with CoffeeScript
+Function mochac {
+	mocha.cmd --compilers coffee:coffee-script $args
+}
