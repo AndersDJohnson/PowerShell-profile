@@ -13,8 +13,13 @@
  
 #>
 
+$here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
+. ($here + "\Scripts\Import-Module-Safe.ps1") -force
+
 # Import PsGet
-Import-Module PsGet
+Import-Module-Safe PsGet | Out-Null
+
+. ($here + "\Scripts\Import-PsGet-Modules.ps1") -force
 
 # Set path for Node.js npm modules.
 # $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
