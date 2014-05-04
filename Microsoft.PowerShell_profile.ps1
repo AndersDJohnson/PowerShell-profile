@@ -28,3 +28,8 @@ Import-Module-Safe PsGet | Out-Null
 Function mochac {
 	mocha.cmd --compilers coffee:coffee-script $args
 }
+
+# Load posh-git example profile
+$env:Path += ";C:\Program Files (x86)\Git\bin"
+. 'C:\Users\Anders\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
+

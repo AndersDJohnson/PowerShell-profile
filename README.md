@@ -15,3 +15,11 @@ Windows PowerShell profile script
  
  `> Set-ExecutionPolicy RemoteSigned`
 
+## Modules
+
+### posh-git
+
+#### Requirements
+
+* `ssh-agent.exe` in `PATH`, usually at `C:\Program Files (x86)\Git\bin`
+

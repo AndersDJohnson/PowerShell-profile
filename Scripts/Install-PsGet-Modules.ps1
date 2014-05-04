@@ -1,1 +1,2 @@
-install-module PsUrl
+Install-Module PsUrl
+Install-Module posh-git
