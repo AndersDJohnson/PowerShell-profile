@@ -21,6 +21,8 @@ Import-Module-Safe PsGet | Out-Null
 
 . ($here + "\Scripts\Import-PsGet-Modules.ps1") -force
 
+. ($here + "\Scripts\New-PowerShell.ps1") -force
+
 # Set path for Node.js npm modules.
 # $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
 
