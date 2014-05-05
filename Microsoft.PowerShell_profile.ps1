@@ -13,8 +13,12 @@
  
 #>
 
+$profileDir = Split-Path $profile -parent
+
 $here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 . ($here + "\Scripts\Import-Module-Safe.ps1") -force
+
+$gitBinDir = "C:\Program Files (x86)\Git\bin"
 
 # Import PsGet
 Import-Module-Safe PsGet | Out-Null
@@ -32,6 +36,8 @@ Function mochac {
 }
 
 # Load posh-git example profile
-$env:Path += ";C:\Program Files (x86)\Git\bin"
-. 'C:\Users\Anders\Documents\WindowsPowerShell\Modules\posh-git\profile.example.ps1'
-
+$poshGitProfilePath = $here + "\Modules\posh-git\profile.example.ps1"
+if (Test-Path $poshGitProfilePath) {
+  $env:Path += ";" + $gitBinDir
+  . $poshGitProfilePath
+}
