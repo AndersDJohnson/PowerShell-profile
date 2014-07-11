@@ -24,7 +24,7 @@ Import-Module-Safe PsGet | Out-Null
 . ($here + "\Scripts\New-PowerShell.ps1") -force
 
 # Set path for Node.js npm modules.
-# $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
+$env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
 
 # Mocha testing with CoffeeScript
 Function mochac {
