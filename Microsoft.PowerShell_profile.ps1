@@ -20,9 +20,6 @@ $here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 
 $gitBinDir = "C:\Program Files (x86)\Git\bin"
 
-# Import PsGet
-Import-Module-Safe PsGet | Out-Null
-
 . ($here + "\Scripts\Import-PsGet-Modules.ps1") -force
 
 . ($here + "\Scripts\New-PowerShell.ps1") -force
