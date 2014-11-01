@@ -37,4 +37,9 @@ $poshGitProfilePath = $here + "\Modules\posh-git\profile.example.ps1"
 if (Test-Path $poshGitProfilePath) {
   $env:Path += ";" + $gitBinDir
   . $poshGitProfilePath
+
+  # alias
+  Function SshAgent {
+    Start-SshAgent -Quiet
+  }
 }
