@@ -6,14 +6,18 @@ My profile settings for Windows PowerShell.
 
 Windows PowerShell profile script
 
- Put this somewhere Windows expects it, e.g. at the path returned by this command:
+ Put the contents of this repo where Windows expects it, e.g. at the path returned by this command:
  
- `> echo $profile`
+ ```
+ echo $profile
+ ```
  
  In order to get PowerShell use it, you may need to set the execution policy.
  To allow local and remote-signed scripts, run (as administrator) this command:
  
- `> Set-ExecutionPolicy RemoteSigned`
+ ```
+ Set-ExecutionPolicy RemoteSigned
+ ```
 
 ## Modules
 
