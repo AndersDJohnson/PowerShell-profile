@@ -18,7 +18,16 @@ $profileDir = Split-Path $profile -parent
 $here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 . ($here + "\Scripts\Import-Module-Safe.ps1") -force
 
-$gitBinDir = "C:\Program Files (x86)\Git\bin"
+
+# Load host-specific profile scripts
+$hostProfilePath = $here + "\Hosts\" + $env:computername + ".pre.ps1"
+if (Test-Path $hostProfilePath) {
+  . $hostProfilePath
+}
+
+if ($gitBinDir -eq $null) {
+  $gitBinDir = "C:\Program Files (x86)\Git\bin"
+}
 
 . ($here + "\Scripts\Import-PsGet-Modules.ps1") -force
 
@@ -42,4 +51,10 @@ if (Test-Path $poshGitProfilePath) {
   Function SshAgent {
     Start-SshAgent -Quiet
   }
+}
+
+# Load host-specific profile scripts
+$hostProfilePath = $here + "\Hosts\" + $env:computername + ".ps1"
+if (Test-Path $hostProfilePath) {
+  . $hostProfilePath
 }
