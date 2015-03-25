@@ -2,4 +2,9 @@
  http://chocolatey.org/
 #>
 
-iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+. ($here + "\Scripts\WebClientProxied.ps1") -force
+
+$wc = New-WebClientProxied
+$url = "https://chocolatey.org/install.ps1"
+$str = $wc.DownloadString($url)
+$str | Invoke-Expression

@@ -2,4 +2,9 @@
  http://psget.net/
 #>
 
-(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+. ($here + "\Scripts\WebClientProxied.ps1") -force
+
+$wc = New-WebClientProxied
+$url = "http://psget.net/GetPsGet.ps1"
+$str = $wc.DownloadString($url)
+$str | Invoke-Expression
