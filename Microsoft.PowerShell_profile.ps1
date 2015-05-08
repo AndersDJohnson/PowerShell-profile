@@ -18,6 +18,10 @@ $profileDir = Split-Path $profile -parent
 $here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 . ($here + "\Scripts\Import-Module-Safe.ps1") -force
 
+# Add $env:UserProfile\bin to path
+
+$env:Path = $env:Path + ";$env:UserProfile\bin;"
+
 
 # Load host-specific profile scripts
 $hostProfilePath = $here + "\Hosts\" + $env:computername + ".pre.ps1"
