@@ -65,3 +65,6 @@ $hostProfilePath = $here + "\Hosts\" + $env:computername + ".ps1"
 if (Test-Path $hostProfilePath) {
   . $hostProfilePath
 }
+
+# Sublime Text path
+Set-Alias sublime "C:\Program Files\Sublime Text 2\sublime_text.exe"
