@@ -29,8 +29,12 @@ if (Test-Path $hostProfilePath) {
   . $hostProfilePath
 }
 
+# Exit alias function.
 function x { exit }
-function ex { exit }
+
+# Explorer alias functions.
+function exp { explorer.exe . }
+
 
 if ($gitBinDir -eq $null) {
   $gitBinDir = "C:\Program Files (x86)\Git\bin"
