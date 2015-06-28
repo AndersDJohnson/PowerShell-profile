@@ -29,6 +29,9 @@ if (Test-Path $hostProfilePath) {
   . $hostProfilePath
 }
 
+function x { exit }
+function ex { exit }
+
 if ($gitBinDir -eq $null) {
   $gitBinDir = "C:\Program Files (x86)\Git\bin"
 }
