@@ -72,3 +72,4 @@ if (Test-Path $hostProfilePath) {
 
 # Sublime Text path
 Set-Alias sublime "C:\Program Files\Sublime Text 2\sublime_text.exe"
+Set-Alias subl "C:\Program Files\Sublime Text 2\sublime_text.exe"
