@@ -75,3 +75,8 @@ Set-Alias sublime2 "C:\Program Files\Sublime Text 2\sublime_text.exe"
 Set-Alias sublime3 "C:\Program Files\Sublime Text 3\sublime_text.exe"
 Set-Alias sublime sublime3
 Set-Alias subl sublime
+
+# Change directory into the parent directory of given path
+Function cdd {
+  cd (get-item $args).directory
+}
