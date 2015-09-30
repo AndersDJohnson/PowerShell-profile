@@ -80,3 +80,6 @@ Set-Alias subl sublime
 Function cdd {
   cd (get-item $args).directory
 }
+Function pushdd {
+  pushd (get-item $args).directory
+}
