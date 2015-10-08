@@ -40,6 +40,8 @@ if ($gitBinDir -eq $null) {
   $gitBinDir = "C:\Program Files (x86)\Git\bin"
 }
 
+. ($here + "\Scripts\GitIgnoreIo.ps1") -force
+
 . ($here + "\Scripts\Import-PsGet-Modules.ps1") -force
 
 . ($here + "\Scripts\New-PowerShell.ps1") -force
