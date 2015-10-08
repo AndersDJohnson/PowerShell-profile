@@ -44,6 +44,8 @@ if ($gitBinDir -eq $null) {
 
 . ($here + "\Scripts\New-PowerShell.ps1") -force
 
+. ($here + "\Scripts\Version.ps1") -force
+
 # Set path for Node.js npm modules.
 $env:NODE_PATH = $env:APPDATA + "\npm\node_modules\"
 
