@@ -36,6 +36,9 @@ function x { exit }
 function exp { explorer.exe . }
 
 
+function which ($cmd) { get-command $cmd | select path }
+
+
 if ($gitBinDir -eq $null) {
   $gitBinDir = "C:\Program Files (x86)\Git\bin"
 }
