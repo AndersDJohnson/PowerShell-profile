@@ -15,6 +15,8 @@
 
 $profileDir = Split-Path $profile -parent
 
+function src { & $profile }
+
 $here = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 . ($here + "\Scripts\Import-Module-Safe.ps1") -force
 
